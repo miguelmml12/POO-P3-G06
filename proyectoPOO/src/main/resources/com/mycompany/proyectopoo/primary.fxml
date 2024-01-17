@@ -8,21 +8,20 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoo.PrimaryController">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="700.0">
          <children>
             <Label text="Label" />
-            <TableView prefHeight="200.0" prefWidth="200.0">
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
               <columns>
-                <TableColumn prefWidth="100.0" text="Codigo" />
-                  <TableColumn prefWidth="100.0" text="Nombre" />
-                  <TableColumn prefWidth="100.0" text="Fecha Inicio" />
-                  <TableColumn prefWidth="100.0" text="Lugar" />
-                  <TableColumn prefWidth="100.0" text="No. Auspiciantes" />
-                  <TableColumn prefWidth="100.0" text="No. Emprendedores" />
-                  <TableColumn prefWidth="100.0" text="Opciones" />
+                <TableColumn fx:id="cod" prefWidth="100.0" text="Codigo" />
+                  <TableColumn fx:id="name" prefWidth="100.0" text="Nombre" />
+                  <TableColumn fx:id="f_inicio" prefWidth="100.0" text="Fecha Inicio" />
+                  <TableColumn fx:id="place" prefWidth="100.0" text="Lugar" />
+                  <TableColumn fx:id="n_aus" prefWidth="100.0" text="No. Auspiciantes" />
+                  <TableColumn fx:id="n_emp" prefWidth="100.0" text="No. Emprendedores" />
+                  <TableColumn fx:id="op" prefWidth="100.0" text="Opciones" />
               </columns>
             </TableView>
             <HBox prefHeight="100.0" prefWidth="200.0">
