@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoo.MenuPrincipalController">
    <children>
       <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="70.0" prefWidth="600.0" text="Feria de Emprendedores - Guayaquil 2024" textAlignment="CENTER">
          <font>
@@ -24,18 +24,18 @@
       </Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button fx:id="botonF" mnemonicParsing="false" prefHeight="26.0" prefWidth="61.0" text="FERIAS" />
+            <Button fx:id="botonF" mnemonicParsing="false" onAction="#abrirFer" prefHeight="26.0" prefWidth="61.0" text="FERIAS" />
             <Label prefHeight="18.0" prefWidth="32.0" text="              " textOverrun="CLIP" />
-            <Button fx:id="botonE" mnemonicParsing="false" text="EMPRENDEDORES" />
+            <Button fx:id="botonE" mnemonicParsing="false" onAction="#abrirEmp" text="EMPRENDEDORES" />
             <Label prefHeight="18.0" prefWidth="35.0" text="              " textOverrun="CLIP" />
-            <Button fx:id="botonA" mnemonicParsing="false" text="AUSPICIANTES" />
+            <Button fx:id="botonA" mnemonicParsing="false" onAction="#abrirAus" text="AUSPICIANTES" />
             <Label prefHeight="18.0" prefWidth="32.0" text="              " textOverrun="CLIP" />
-            <Button fx:id="botonS" mnemonicParsing="false" text="STANDS" />
+            <Button fx:id="botonS" mnemonicParsing="false" onAction="#abrirStands" text="STANDS" />
          </children>
          <effect>
             <Glow level="0.22" />
          </effect>
       </HBox>
-      <Button fx:id="botonSalir" mnemonicParsing="false" prefHeight="63.0" prefWidth="100.0" text="SALIR" textFill="RED" />
+      <Button fx:id="botonSalir" mnemonicParsing="false" onAction="#salir" prefHeight="63.0" prefWidth="100.0" text="SALIR" textFill="RED" />
    </children>
 </VBox>
