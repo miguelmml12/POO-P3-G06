@@ -24,18 +24,18 @@
       </Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="61.0" text="FERIAS" />
+            <Button fx:id="botonF" mnemonicParsing="false" prefHeight="26.0" prefWidth="61.0" text="FERIAS" />
             <Label prefHeight="18.0" prefWidth="32.0" text="              " textOverrun="CLIP" />
-            <Button mnemonicParsing="false" text="EMPRENDEDORES" />
+            <Button fx:id="botonE" mnemonicParsing="false" text="EMPRENDEDORES" />
             <Label prefHeight="18.0" prefWidth="35.0" text="              " textOverrun="CLIP" />
-            <Button mnemonicParsing="false" text="AUSPICIANTES" />
+            <Button fx:id="botonA" mnemonicParsing="false" text="AUSPICIANTES" />
             <Label prefHeight="18.0" prefWidth="32.0" text="              " textOverrun="CLIP" />
-            <Button mnemonicParsing="false" text="STANDS" />
+            <Button fx:id="botonS" mnemonicParsing="false" text="STANDS" />
          </children>
          <effect>
             <Glow level="0.22" />
          </effect>
       </HBox>
-      <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="100.0" text="SALIR" textFill="RED" />
+      <Button fx:id="botonSalir" mnemonicParsing="false" prefHeight="63.0" prefWidth="100.0" text="SALIR" textFill="RED" />
    </children>
 </VBox>
