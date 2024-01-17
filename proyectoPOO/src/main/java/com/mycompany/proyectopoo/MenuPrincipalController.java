@@ -32,7 +32,7 @@ public class MenuPrincipalController implements Initializable {
     @FXML
     private Button botonSalir;
     /**
-     * Initializes the controller class.
+     * Initializes the controller classf.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
