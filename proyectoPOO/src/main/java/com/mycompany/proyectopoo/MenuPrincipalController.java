@@ -36,22 +36,27 @@ public class MenuPrincipalController implements Initializable {
     private Button botonS;
     @FXML
     private Button botonSalir;
+ 
     /**
      * Initializes the controller classf.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+ 
         Thread t = new Thread( () ->
         {
-             MenuFeria.agregarFeriaTest();
-    MenuEmprendedor.agregar4Emprendedores();
-    AuspicianteManager.agregarAspicianteInicial();
+
+          MenuFeria.agregarFeriaTest();
+          MenuEmprendedor.agregar4Emprendedores();
+          AuspicianteManager.agregarAspicianteInicial();   
+
+
      System.out.println(MenuFeria.ferias);
 
-        System.out.println("El codigo de la feria es el numero entero de la posicion en que fue creada (la feria ya creada (que se pide) tiene codigo 1)");
         });
         t.setDaemon(true);
         t.start();
+ 
    
     
     }    

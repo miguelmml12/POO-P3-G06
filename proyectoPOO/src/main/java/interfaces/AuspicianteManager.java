@@ -10,10 +10,13 @@ public class AuspicianteManager {
     private static ArrayList<Auspiciante> auspiciantes = new ArrayList<Auspiciante>();
 
     public static int contador = 1;
+    public static int t = 0;
     public static String[] nombres_redesS = new String[]{"Twitter", "Facebook", "Instagram", "Youtube", "Tik tok", "Linkedin", "Pinterest"};
 
     public static void agregarAspicianteInicial() {
-      Feria fer = MenuFeria.ferias.get(0);
+      if(t==0){
+          t++;
+          Feria fer = MenuFeria.ferias.get(0);
       Stand stand1 = fer.getSeccion1().get(1);
 
         ArrayList<String> redesJibajaCorp = new ArrayList<String>();
@@ -32,6 +35,7 @@ public class AuspicianteManager {
       auspiciantes.get(0).setDescripcion("auspicio de refrescos");
       fer1.getAuspiciantes_en_feria().add(auspiciantes.get(0));
 
+      }
       
     }
 

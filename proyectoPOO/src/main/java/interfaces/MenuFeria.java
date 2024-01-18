@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class MenuFeria {
 
     public static ArrayList<Feria> ferias = new ArrayList<Feria>();
+    public static int u = 0;
 
     public static void administracionDeFerias() {
         int opcion = 0;
@@ -308,19 +309,23 @@ public class MenuFeria {
     }
 
     public static void agregarFeriaTest() {
-        ArrayList<Stand> seccion1 = new ArrayList<Stand>();
-        ArrayList<Stand> seccion2 = new ArrayList<Stand>();
-        ArrayList<Stand> seccion3 = new ArrayList<Stand>();
-        ArrayList<Stand> seccion4 = new ArrayList<Stand>();
+        if(u == 0){
+         u++;
+         ArrayList<Stand> seccion1 = new ArrayList<Stand>();
+         ArrayList<Stand> seccion2 = new ArrayList<Stand>();
+         ArrayList<Stand> seccion3 = new ArrayList<Stand>();
+         ArrayList<Stand> seccion4 = new ArrayList<Stand>();
 
-        seccion1.add(new Stand("A1"));
-        seccion1.add(new Stand("A2"));
-        seccion2.add(new Stand("B1"));
-        seccion3.add(new Stand("C1"));
-        seccion4.add(new Stand("D1"));
+         seccion1.add(new Stand("A1"));
+         seccion1.add(new Stand("A2"));
+         seccion2.add(new Stand("B1"));
+         seccion3.add(new Stand("C1"));
+         seccion4.add(new Stand("D1"));
 
-        Feria nuevaFeriatest = new Feria("FeriaInicial", "feria_creada_al_inicio(ejemplo)", "FADCOM", "1/01/2024", "3/01/2024", "9:00am - 12:00pm", seccion1, seccion2, seccion3, seccion4);
+         Feria nuevaFeriatest = new Feria("FeriaInicial", "feria_creada_al_inicio(ejemplo)", "FADCOM", "1/01/2024", "3/01/2024", "9:00am - 12:00pm", seccion1, seccion2, seccion3, seccion4);
 
-        ferias.add(nuevaFeriatest);
+         ferias.add(nuevaFeriatest);    
+         }
+        
     }
 }

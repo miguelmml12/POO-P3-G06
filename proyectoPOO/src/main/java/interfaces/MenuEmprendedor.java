@@ -11,8 +11,12 @@ public class MenuEmprendedor {
   
     private static ArrayList<Emprendedor> l_emprendedores = new ArrayList<Emprendedor>();
     public static String[] nombres_redesS = new String[]{"Twitter", "Facebook", "Instagram", "Youtube", "Tik tok", "Linkedin", "Pinterest"};
-
+    public static int y = 0;
+    
     public static void agregar4Emprendedores() {
+
+        if(y==0){
+         y++;
         Feria fer = MenuFeria.ferias.get(0);
         Stand stand1 = fer.getSeccion1().get(0);
         Stand stand2 = fer.getSeccion2().get(0);
@@ -65,6 +69,8 @@ public class MenuEmprendedor {
         l_emprendedores.add(emp4);
         stand4.setEmprendedor(emp4);
       stand4.setCodigo("D1*");
+        }
+        
     }
 
     public static void mostrar_MenuE() {
