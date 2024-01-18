@@ -2,39 +2,75 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoo.PrimaryController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="700.0" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoo.PrimaryController">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="700.0">
+      <VBox alignment="TOP_CENTER" minWidth="700.0" prefHeight="400.0" prefWidth="700.0">
          <children>
-            <Label text="Label" />
-            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
-              <columns>
-                <TableColumn fx:id="cod" prefWidth="100.0" text="Codigo" />
-                  <TableColumn fx:id="name" prefWidth="100.0" text="Nombre" />
-                  <TableColumn fx:id="f_inicio" prefWidth="100.0" text="Fecha Inicio" />
-                  <TableColumn fx:id="place" prefWidth="100.0" text="Lugar" />
-                  <TableColumn fx:id="n_aus" prefWidth="100.0" text="No. Auspiciantes" />
-                  <TableColumn fx:id="n_emp" prefWidth="100.0" text="No. Emprendedores" />
-                  <TableColumn fx:id="op" prefWidth="100.0" text="Opciones" />
-              </columns>
-            </TableView>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <Label prefHeight="18.0" prefWidth="39.0" text="Ferias" />
+            <VBox minWidth="700.0" prefHeight="314.0" prefWidth="700.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" text="Detalles" />
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" text="Nueva Feria" />
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" text="Editar" />
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" text="Ver Emprendedores" />
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" text="Ver Auspiciantes" />
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" text="Ver detalles" />
+                  <HBox minWidth="700.0" prefHeight="33.0" prefWidth="700.0" style="-fx-border-color: #000000;">
+                     <children>
+                        <HBox alignment="CENTER" minWidth="50.0" prefHeight="32.0" prefWidth="52.0" scaleShape="false" style="-fx-border-color: #000000; -fx-background-color: #5FC1DD;">
+                           <children>
+                              <Label prefWidth="50.0" text="Codigo" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="100.0" scaleShape="false" style="-fx-border-color: #000000; -fx-background-color: #5FC1DD;">
+                           <children>
+                              <Label text="Nombre" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="98.0" prefWidth="100.0" scaleShape="false" style="-fx-border-color: #000000; -fx-background-color: #5FC1DD;">
+                           <children>
+                              <Label text="Fecha Inicio" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="98.0" prefWidth="100.0" scaleShape="false" style="-fx-border-color: #000000; -fx-background-color: #5FC1DD;">
+                           <children>
+                              <Label text="Lugar" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="98.0" prefWidth="100.0" scaleShape="false" style="-fx-border-color: #000000; -fx-background-color: #5FC1DD;">
+                           <children>
+                              <Label text="No. Auspiciantes" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="98.0" prefWidth="100.0" scaleShape="false" style="-fx-border-color: #000000; -fx-background-color: #5FC1DD;">
+                           <children>
+                              <Label text="No.Emprendedores">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="148.0" scaleShape="false" style="-fx-border-color: #000000; -fx-background-color: #5FC1DD;">
+                           <children>
+                              <Label text="Opciones" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="table" prefHeight="271.0" prefWidth="700.0" />
+               </children>
+            </VBox>
+            <HBox prefHeight="27.0" prefWidth="700.0">
+               <children>
+                  <Button fx:id="detalles" mnemonicParsing="false" onAction="#detalles" prefHeight="26.0" prefWidth="121.0" text="Detalles" />
+                  <Button fx:id="nuevafer" mnemonicParsing="false" onAction="#nuevafer" prefHeight="26.0" prefWidth="121.0" text="Nueva Feria" />
+                  <Button fx:id="editar" mnemonicParsing="false" onAction="#editar" prefHeight="26.0" prefWidth="121.0" text="Editar" />
+                  <Button fx:id="viewEmp" mnemonicParsing="false" onAction="#verEmp" prefHeight="26.0" prefWidth="121.0" text="Ver Emprendedores" />
+                  <Button fx:id="viewAus" mnemonicParsing="false" onAction="#verAus" prefHeight="26.0" prefWidth="121.0" text="Ver Auspiciantes" />
+                  <Button fx:id="viewStands" mnemonicParsing="false" onAction="#verStands" prefHeight="26.0" prefWidth="121.0" text="Ver Stands" />
                </children>
             </HBox>
+            <Button fx:id="rreturn" mnemonicParsing="false" onAction="#regresar" text="Regresar" />
          </children>
       </VBox>
    </children>
-</Pane>
+</HBox>

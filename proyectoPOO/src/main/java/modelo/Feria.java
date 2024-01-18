@@ -5,12 +5,12 @@ import java.util.Arrays;
 public class Feria {
     private static int codigoIncremental = 1;
     public int codigo;
-    private String nombre;
-    private String descripcion;
-    private String lugar;
-    private String fechaInicio;
-    private String fechaFin;
-    private String horario;
+    public String nombre;
+    public String descripcion;
+    public String lugar;
+    public String fechaInicio;
+    public String fechaFin;
+    public String horario;
     // private int[] cantidadStands;  // Cantidad de stands por sección
     private ArrayList<Emprendedor> emprendedores;
     private ArrayList<Auspiciante> auspiciantes_en_feria;

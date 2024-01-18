@@ -42,7 +42,7 @@ public class PrimaryController implements Initializable {
         for(Feria feria:fer){
             HBox caja = new HBox();
             HBox cod = new HBox();
-            cod.setPrefWidth(100);
+            cod.setPrefWidth(52);
             cod.setPrefHeight(90);
             cod.setAlignment(Pos.CENTER);
             cod.setStyle("-fx-border-color: black; -fx-border-width: 1px;"); 
@@ -90,15 +90,18 @@ public class PrimaryController implements Initializable {
             noEmp.getChildren().add(nOEmp);
             
             HBox opc = new HBox();
+            opc.setStyle("-fx-border-color: black; -fx-border-width: 1px;"); 
+            opc.setPrefWidth(148);
+            opc.setPrefHeight(90);
             VBox op = new VBox();
             Hyperlink details = new Hyperlink("Detalles");
             Hyperlink viewEmp = new Hyperlink("Ver Emprendedores");
             Hyperlink viewAus = new Hyperlink("\"Ver Auspiciante\"");
             Hyperlink viewStands = new Hyperlink("Ver Stands");
-                        
+            op.getChildren().addAll(details,viewEmp,viewAus,viewStands);
+            opc.getChildren().add(op);
             
-            
-            caja.getChildren().addAll(cod,name,fecha, lugar, noAus, noEmp);
+            caja.getChildren().addAll(cod,name,fecha, lugar, noAus, noEmp,opc);
             table.getChildren().add(caja);
             
  
