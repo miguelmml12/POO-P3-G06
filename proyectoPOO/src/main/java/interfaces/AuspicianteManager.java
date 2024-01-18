@@ -7,7 +7,7 @@ import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 
 public class AuspicianteManager {
-    private static ArrayList<Auspiciante> auspiciantes = new ArrayList<Auspiciante>();
+    public static ArrayList<Auspiciante> auspiciantes = new ArrayList<Auspiciante>();
 
     public static int contador = 1;
     public static int t = 0;
