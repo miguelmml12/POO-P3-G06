@@ -33,9 +33,6 @@ public class MenuEmprendedorController implements Initializable {
         // TODO
     }    
     
-    @FXML
-    private void nuevoEmp(ActionEvent event) {
-    }
 
     @FXML
     private void editarEmp(ActionEvent event) {

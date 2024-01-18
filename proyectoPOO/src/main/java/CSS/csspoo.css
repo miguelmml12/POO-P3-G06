@@ -1,2 +1,61 @@
-/*
-*/
+/* styles.css */
+
+/* Estilo para el botón FERIAS */
+#botonF {
+    -fx-background-color: #3498db; /* Color de fondo */
+    -fx-text-fill: white; /* Color del texto */
+    -fx-font-size: 14; /* Tamaño de fuente */
+    -fx-padding: 10 20; /* Relleno interno del botón */
+}
+
+#botonF:hover {
+    -fx-background-color: #2980b9; /* Cambia el color al pasar el ratón sobre el botón */
+}
+
+/* Estilo para el botón EMPRENDEDORES */
+#botonE {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-padding: 10 20;
+}
+
+#botonE:hover {
+    -fx-background-color: #219d54;
+}
+
+/* Estilo para el botón AUSPICIANTES */
+#botonA {
+    -fx-background-color: #e67e22;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-padding: 10 20;
+}
+
+#botonA:hover {
+    -fx-background-color: #d35400;
+}
+
+/* Estilo para el botón STANDS */
+#botonS {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-padding: 10 20;
+}
+
+#botonS:hover {
+    -fx-background-color: #d68910;
+}
+
+/* Estilo para el botón SALIR */
+#botonSalir {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-padding: 10 20;
+}
+
+#botonSalir:hover {
+    -fx-background-color: #c0392b;
+}
