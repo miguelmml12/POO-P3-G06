@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoo.MenuEmprendedorController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoo.MenuAuspicianteController">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -32,12 +32,12 @@
                   </HBox>
                   <VBox alignment="CENTER" prefHeight="199.0" prefWidth="153.0">
                      <children>
-                        <Button fx:id="nuevoEmp" mnemonicParsing="false" onAction="#editarEmp" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: green;" text="Nuevo Auspiciante" />
+                        <Button fx:id="nuevoAus" mnemonicParsing="false" onAction="#editarAus" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: green;" text="Nuevo Auspiciante" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="199.0" prefWidth="255.0">
                      <children>
-                        <Button fx:id="editarEmp" mnemonicParsing="false" onAction="#editarEmp" prefHeight="30.0" prefWidth="138.0" style="-fx-background-color: green;" text="Editar Emprendedor" />
+                        <Button fx:id="editarAus" mnemonicParsing="false" onAction="#editarAus" prefHeight="30.0" prefWidth="138.0" style="-fx-background-color: green;" text="Editar Auspiciante" />
                      </children>
                   </VBox>
                </children>
@@ -46,7 +46,7 @@
       </VBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button fx:id="salirEmp" mnemonicParsing="false" onAction="#salirEmp" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: red;" text="Salir" />
+            <Button fx:id="salirAus" mnemonicParsing="false" onAction="#salirAus" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: red;" text="Salir" />
          </children>
       </HBox>
    </children>
