@@ -59,7 +59,7 @@ public class MenuFeriasController implements Initializable {
     }    
     
     @FXML
-    private void guardar(ActionEvent event) {
+    private void guardar(ActionEvent event) throws IOException {
         
         String nombre = name.getText();
         String descripcion = description.getText();
@@ -105,6 +105,7 @@ public class MenuFeriasController implements Initializable {
 
             Feria nuevaFeria = new Feria(nombre, descripcion, lugar, fechaInicio, fechaFin, horario, seccion1, seccion2, seccion3, seccion4);
             MenuFeria.ferias.add(nuevaFeria);
+            App.setRoot("menuPrincipal");
         
     }
 
