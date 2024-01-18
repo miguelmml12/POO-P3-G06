@@ -32,12 +32,12 @@
                   </HBox>
                   <VBox alignment="CENTER" prefHeight="199.0" prefWidth="153.0">
                      <children>
-                        <Button fx:id="nuevoAus" mnemonicParsing="false" onAction="#editarAus" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: green;" text="Nuevo Auspiciante" />
+                        <Button fx:id="nuevoAus" mnemonicParsing="false" onAction="#editarAus" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: CHARTREUSE;" text="Nuevo Auspiciante" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="199.0" prefWidth="255.0">
                      <children>
-                        <Button fx:id="editarAus" mnemonicParsing="false" onAction="#editarAus" prefHeight="30.0" prefWidth="138.0" style="-fx-background-color: green;" text="Editar Auspiciante" />
+                        <Button fx:id="editarAus" mnemonicParsing="false" onAction="#editarAus" prefHeight="30.0" prefWidth="138.0" style="-fx-background-color: CHARTREUSE;" text="Editar Auspiciante" />
                      </children>
                   </VBox>
                </children>
