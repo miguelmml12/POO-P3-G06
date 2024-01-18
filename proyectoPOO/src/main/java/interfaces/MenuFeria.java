@@ -100,7 +100,7 @@ public class MenuFeria {
         }
     }
 
-    static Feria buscarFeriaPorCodigo(int codigo) {
+    public static Feria buscarFeriaPorCodigo(int codigo) {
         for (Feria feria : ferias) {
             if (feria.getCodigo() == codigo) {
                 return feria;

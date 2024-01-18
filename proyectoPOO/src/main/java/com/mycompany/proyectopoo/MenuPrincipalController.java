@@ -73,7 +73,8 @@ public class MenuPrincipalController implements Initializable {
 
         
     @FXML
-    private void abrirEmp(ActionEvent event) {
+    private void abrirEmp(ActionEvent event) throws IOException {
+    App.setRoot("menuEmprendedor");
     }
 
     @FXML
@@ -81,7 +82,8 @@ public class MenuPrincipalController implements Initializable {
     }
 
     @FXML
-    private void abrirStands(ActionEvent event) {
+    private void abrirStands(ActionEvent event) throws IOException {
+        App.setRoot("menuStands");
     }
 
     @FXML
