@@ -1,0 +1,26 @@
+
+/* styles.css */
+
+.textbox-nombre {
+    -fx-prompt-text-fill: #3498db; /* Color del texto de marcador de posición */
+    -fx-background-color: #ecf0f1; /* Color de fondo */
+    -fx-border-color: #3498db; /* Color del borde */
+    -fx-border-width: 2px; /* Ancho del borde */
+    -fx-border-radius: 5px; /* Radio de las esquinas del borde */
+    -fx-padding: 5px; /* Relleno interno */
+}
+
+.textbox-descripcion {
+    -fx-prompt-text-fill: #e74c3c; /* Color del texto de marcador de posición */
+    -fx-background-color: #f2dede; /* Color de fondo */
+    -fx-border-color: #e74c3c; /* Color del borde */
+    -fx-border-width: 2px; /* Ancho del borde */
+    -fx-border-radius: 5px; /* Radio de las esquinas del borde */
+    -fx-padding: 5px; /* Relleno interno */
+}
+
+/* Estilo Hover para resaltar al pasar el ratón sobre el TextField o TextArea */
+.textbox-nombre:hover, .textbox-descripcion:hover {
+    -fx-background-color: #d4e6f1; /* Color de fondo al pasar el ratón */
+    -fx-border-color: #2980b9; /* Color del borde al pasar el ratón */
+}
