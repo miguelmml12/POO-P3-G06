@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="200.0" prefWidth="600.0">
+         <children>
+            <BorderPane prefHeight="195.0" prefWidth="299.0">
+               <center>
+                  <Label text="Ingrese el código de la feria    -----&gt;" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+            <AnchorPane prefHeight="195.0" prefWidth="302.0">
+               <children>
+                  <AutoCompleteTextField fx:id="textboxCodeF" layoutX="43.0" layoutY="49.0" prefHeight="45.0" prefWidth="216.0" style="-fx-background-color: #ecf0f1;" />
+                  <Button fx:id="buscar" layoutX="113.0" layoutY="105.0" mnemonicParsing="false" onAction="#buscar" prefHeight="30.0" prefWidth="76.0" text="Buscar" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="269.0" prefWidth="600.0">
+         <children>
+            <VBox fx:id="tablaStands" alignment="TOP_CENTER" prefHeight="213.0" prefWidth="603.0">
+               <children>
+                  <Label text="Stands:">
+                     <font>
+                        <Font name="System Italic" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="volver" mnemonicParsing="false" onAction="#volver" prefHeight="28.0" prefWidth="101.0" text="Volver" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
