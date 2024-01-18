@@ -20,9 +20,9 @@ public class MenuFeriaController implements Initializable {
 
 
     @FXML
-    private Button guardarButton;
+    private Button guardarBoton;
     @FXML
-    private Button cancelarButton;
+    private Button cancelarBoton;
     /**
      * Initializes the controller class.
      */
