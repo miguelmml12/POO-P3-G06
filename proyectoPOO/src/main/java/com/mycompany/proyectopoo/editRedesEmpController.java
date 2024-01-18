@@ -10,21 +10,35 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 /**
  * FXML Controller class
  *
  * @author angel
  */
-public class MenuEmprendedorController implements Initializable {
+public class editRedesEmpController implements Initializable {
 
 
     @FXML
-    private Button nuevoEmp;
+    private Button botonGuardar;
     @FXML
-    private Button editarEmp;
+    private Button cancelarBoton;
     @FXML
-    private Button salirEmp;
+    private TextField tw;
+    @FXML
+    private TextField fb;
+    @FXML
+    private TextField ig;
+    @FXML
+    private TextField tiktok;
+    @FXML
+    private TextField linkedln;
+    @FXML
+    private TextField yt;
+    @FXML
+    private TextField pinterest;
     /**
      * Initializes the controller class.
      */
@@ -33,20 +47,13 @@ public class MenuEmprendedorController implements Initializable {
         // TODO
     }    
     
-
     @FXML
-    private void editarEmp(ActionEvent event) throws IOException {
-         App.setRoot("editEmp");
+    private void guardar(ActionEvent event) {
     }
 
     @FXML
-    private void salirEmp(ActionEvent event) throws IOException {
-        App.setRoot("menuPrincipal");
-    }
-
-    @FXML
-    private void nuevoEmp(ActionEvent event) throws IOException {
-        App.setRoot("aggEmp");
+    private void cancelar(ActionEvent event) throws IOException {
+        App.setRoot("menuEmprendedor");
     }
 
 }

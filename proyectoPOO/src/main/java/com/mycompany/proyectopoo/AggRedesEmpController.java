@@ -4,6 +4,7 @@
  */
 package com.mycompany.proyectopoo;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -51,7 +52,8 @@ public class AggRedesEmpController implements Initializable {
     }
 
     @FXML
-    private void cancelar(ActionEvent event) {
+    private void cancelar(ActionEvent event) throws IOException {
+        App.setRoot("menuEmprendedor");
     }
 
 }
