@@ -12,8 +12,8 @@ public class Feria {
     public String fechaFin;
     public String horario;
     // private int[] cantidadStands;  // Cantidad de stands por sección
-    private ArrayList<Emprendedor> emprendedores;
-    private ArrayList<Auspiciante> auspiciantes_en_feria;
+    public ArrayList<Emprendedor> emprendedores;
+    public ArrayList<Auspiciante> auspiciantes_en_feria;
   public ArrayList<Stand> seccion1  = new ArrayList<Stand>();
   public ArrayList<Stand> seccion2  = new ArrayList<Stand>();
   public ArrayList<Stand> seccion3  = new ArrayList<Stand>();

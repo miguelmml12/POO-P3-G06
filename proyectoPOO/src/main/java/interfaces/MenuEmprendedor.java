@@ -31,6 +31,7 @@ public class MenuEmprendedor {
         }
         Emprendedor emp1 = new Emprendedor("1725944720", "Josue Jibaja", "CARRILLO BASTIDAS GLADYS ELIANA", "0969237923", "jdjibaja@espol.edu.ec", "La joya", "this-is-the-way.com", redesJibaja, "servicio de armado de drones");
         l_emprendedores.add(emp1);
+        fer.emprendedores.add(emp1);
         stand1.setEmprendedor(emp1);
       stand1.setCodigo("A1*");
       
@@ -45,6 +46,7 @@ public class MenuEmprendedor {
         }
         Emprendedor emp2 = new Emprendedor("1211111111", "Andres Bohorquez", "CARRILLO BASTIDAS GLADYS ELIANA", "0999999999", "bohorquez@espol.edu.ec", "guayaquil", "tilin.com", redesBohorquez, "pasar deadlocked(geometry dash)");
         l_emprendedores.add(emp2);
+        fer.emprendedores.add(emp2);
         stand2.setEmprendedor(emp2);
       stand2.setCodigo("B1*");
 
@@ -56,6 +58,7 @@ public class MenuEmprendedor {
         }
         Emprendedor emp3 = new Emprendedor("1311111111", "Miguel Medina", "CARRILLO BASTIDAS GLADYS ELIANA", "0999999999", "medina@espol.edu.ec", "guayaquil", "medina.com", redesMedina, "Lorem ipsum dolor sit amet, consectetur adipiscing elit");
         l_emprendedores.add(emp3);
+        fer.emprendedores.add(emp3);
         stand3.setEmprendedor(emp3);
         stand3.setCodigo("C1*");
 
@@ -67,6 +70,7 @@ public class MenuEmprendedor {
         }
         Emprendedor emp4 = new Emprendedor("1411111111", "John Doe", "CARRILLO BASTIDAS GLADYS ELIANA", "0999999999", "johndoe@espol.edu.ec", "guayaquil", "john_doe.com", redesJohnDoe, "Lorem ipsum dolor sit amet, consectetur adipiscing elit");
         l_emprendedores.add(emp4);
+        fer.emprendedores.add(emp4);
         stand4.setEmprendedor(emp4);
       stand4.setCodigo("D1*");
         }

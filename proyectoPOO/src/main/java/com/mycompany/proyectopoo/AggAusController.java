@@ -6,6 +6,7 @@ package com.mycompany.proyectopoo;
 
 import interfaces.AuspicianteManager;
 import static interfaces.AuspicianteManager.buscarAuspiciantePorID;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -45,15 +46,15 @@ public class AggAusController implements Initializable {
     @FXML
     public TextField sec;
     
-       public String cedula;
-       public String name;
-       public String nombrePersona;
-       public String telefone;
-       public String mail;
-       public String direction;
-       public String sitioWeb;
-       public int num;
-       public Sector sector = Sector.ALIMENTACION;
+       public  static String cedula;
+       public static String name;
+       public static String nombrePersona;
+       public static String telefone;
+       public static String mail;
+       public static String direction;
+       public static String sitioWeb;
+       public static int num;
+       public static Sector sector = Sector.ALIMENTACION;
     /**
      * Initializes the controller class.
      */
@@ -63,7 +64,7 @@ public class AggAusController implements Initializable {
     }    
     
     @FXML
-    public void irRedes(ActionEvent event) {
+    public void irRedes(ActionEvent event) throws IOException {
         
         cedula = idPerson.getText();
          name = nombre.getText();
@@ -88,12 +89,14 @@ public class AggAusController implements Initializable {
                 sector = Sector.VESTIMENTA;
                 break;
         }
+         App.setRoot("aggRedesAus");
 
     }
         
 
     @FXML
-    private void cancelar(ActionEvent event) {
+    private void cancelar(ActionEvent event) throws IOException {
+        App.setRoot("menuPrincipal");
     }
 
 }
