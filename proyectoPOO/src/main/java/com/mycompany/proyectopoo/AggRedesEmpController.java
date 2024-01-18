@@ -6,25 +6,38 @@ package com.mycompany.proyectopoo;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-iimport javafx.event.ActionEvent;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-mport javafx.fxml.Initializable;
+import javafx.fxml.Initializable;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 /**
  * FXML Controller class
  *
- * @author Josue.jibaja
+ * @author angel
  */
-public class MenuAuspicianteController implements Initializable {
+public class AggRedesEmpController implements Initializable {
 
 
     @FXML
-    private Button nuevoEmp;
+    private Button botonSiguiente;
     @FXML
-    private Button editarEmp;
+    private Button cancelarBoton;
     @FXML
-    private Button salirEmp;
+    private TextField tw;
+    @FXML
+    private TextField fb;
+    @FXML
+    private TextField ig;
+    @FXML
+    private TextField tiktok;
+    @FXML
+    private TextField linkedln;
+    @FXML
+    private TextField yt;
+    @FXML
+    private TextField pinterest;
     /**
      * Initializes the controller class.
      */
@@ -34,11 +47,11 @@ public class MenuAuspicianteController implements Initializable {
     }    
     
     @FXML
-    private void editarEmp(ActionEvent event) {
+    private void guardar(ActionEvent event) {
     }
 
     @FXML
-    private void salirEmp(ActionEvent event) {
+    private void cancelar(ActionEvent event) {
     }
 
 }

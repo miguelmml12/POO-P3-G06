@@ -10,21 +10,35 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 /**
  * FXML Controller class
  *
  * @author angel
  */
-public class MenuEmprendedorController implements Initializable {
+public class AggEmpController implements Initializable {
 
 
     @FXML
-    private Button nuevoEmp;
+    private Button botonSiguiente;
     @FXML
-    private Button editarEmp;
+    private Button cancelarBoton;
     @FXML
-    private Button salirEmp;
+    private TextField idPerson;
+    @FXML
+    private TextField nombre;
+    @FXML
+    private TextField telefono;
+    @FXML
+    private TextField email;
+    @FXML
+    private TextField direccion;
+    @FXML
+    private TextField website;
+    @FXML
+    private TextField personaRes;
     /**
      * Initializes the controller class.
      */
@@ -33,15 +47,15 @@ public class MenuEmprendedorController implements Initializable {
         // TODO
     }    
     
-
     @FXML
-    private void editarEmp(ActionEvent event) throws IOException {
-         App.setRoot("aggEmprendedor");
+    private void irRedes(ActionEvent event) throws IOException {
+                 App.setRoot("aggRedesEmp");
+
     }
 
     @FXML
-    private void salirEmp(ActionEvent event) throws IOException {
-        App.setRoot("menuPrincipal");
+    private void cancelar(ActionEvent event) throws IOException {
+                 App.setRoot("menuEmprendedor");
     }
 
 }
