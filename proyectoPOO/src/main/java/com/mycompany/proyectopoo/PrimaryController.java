@@ -1,10 +1,11 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit thisc template
  */
 package com.mycompany.proyectopoo;
 import modelo.*;
 import interfaces.*;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -139,7 +140,8 @@ public class PrimaryController implements Initializable {
     }
 
     @FXML
-    private void regresar(ActionEvent event) {
+    private void regresar(ActionEvent event) throws IOException {
+        App.setRoot("menuPrincipal");
     }
     
 }
