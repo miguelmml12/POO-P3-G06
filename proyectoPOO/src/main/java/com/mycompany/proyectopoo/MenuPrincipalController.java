@@ -4,18 +4,16 @@
  */
 package com.mycompany.proyectopoo;
 
+import com.mycompany.proyectopoo.App;
+import interfaces.AuspicianteManager;
+import interfaces.MenuEmprendedor;
+import interfaces.MenuFeria;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import java.io.IOException;
-import modelo.*;
-import interfaces.*;
-import interfaces.MenuFeria;
-// import interfaces.MenuEmprendedor;
-import java.util.Arrays;
-
 
 import javafx.scene.control.Button;
 /**
@@ -29,21 +27,19 @@ public class MenuPrincipalController implements Initializable {
     @FXML
     private Button botonF;
     @FXML
-    private Button botonE;
-    @FXML
-    private Button botonA;
-    @FXML
     private Button botonS;
     @FXML
     private Button botonSalir;
- 
+    @FXML
+    private Button botonEmp;
+    @FXML
+    private Button botonAus;
     /**
-     * Initializes the controller classf.
+     * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
- 
-        Thread t = new Thread( () ->
+         Thread t = new Thread( () ->
         {
 
           MenuFeria.agregarFeriaTest();
@@ -56,35 +52,13 @@ public class MenuPrincipalController implements Initializable {
         });
         t.setDaemon(true);
         t.start();
- 
-   
-    
     }    
     
     @FXML
-    private void abrirFer(ActionEvent event)throws IOException {
-//        Thread t = new Thread( () ->
-//        {
-//             MenuFeria.administracionDeFerias();
-//
-//        System.out.println("El codigo de la feria es el numero entero de la posicion en que fue creada (la feria ya creada (que se pide) tiene codigo 1)");
-//        });
-//        t.setDaemon(true);
-//        t.start();
-            App.setRoot("primary");
-
-            
+    private void abrirFer(ActionEvent event) throws IOException {
+        App.setRoot("primary");
     }
 
-        
-    @FXML
-    private void abrirEmp(ActionEvent event) throws IOException {
-    App.setRoot("menuEmprendedor");
-    }
-
-    @FXML
-    private void abrirAus(ActionEvent event) {
-    }
 
     @FXML
     private void abrirStands(ActionEvent event) throws IOException {
@@ -93,6 +67,16 @@ public class MenuPrincipalController implements Initializable {
 
     @FXML
     private void salir(ActionEvent event) {
+    }
+
+    @FXML
+    private void emp(ActionEvent event) throws IOException {
+        App.setRoot("menuEmprendedor");
+    }
+
+    @FXML
+    private void aus(ActionEvent event) throws IOException {
+        App.setRoot("menuAuspiciante");
     }
 
 }

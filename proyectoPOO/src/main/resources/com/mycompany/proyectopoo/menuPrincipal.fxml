@@ -26,9 +26,9 @@
          <children>
             <Button fx:id="botonF" mnemonicParsing="false" onAction="#abrirFer" prefHeight="26.0" prefWidth="61.0" text="FERIAS" />
             <Label prefHeight="18.0" prefWidth="32.0" text="              " textOverrun="CLIP" />
-            <Button fx:id="botonE" mnemonicParsing="false" onAction="#abrirEmp" text="EMPRENDEDORES" />
+            <Button fx:id="botonEmp" mnemonicParsing="false" onAction="#emp" text="Emprendedor" />
             <Label prefHeight="18.0" prefWidth="35.0" text="              " textOverrun="CLIP" />
-            <Button fx:id="botonA" mnemonicParsing="false" onAction="#abrirAus" text="AUSPICIANTES" />
+            <Button fx:id="botonAus" mnemonicParsing="false" onAction="#aus" text="Auspiciante" />
             <Label prefHeight="18.0" prefWidth="32.0" text="              " textOverrun="CLIP" />
             <Button fx:id="botonS" mnemonicParsing="false" onAction="#abrirStands" text="STANDS" />
          </children>

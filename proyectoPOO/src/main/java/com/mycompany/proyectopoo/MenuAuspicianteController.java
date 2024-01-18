@@ -4,6 +4,7 @@
  */
 package com.mycompany.proyectopoo;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -38,7 +39,8 @@ public class MenuAuspicianteController implements Initializable {
     }
 
     @FXML
-    private void salirAus(ActionEvent event) {
+    private void salirAus(ActionEvent event) throws IOException {
+        App.setRoot("menuPrincipal");
     }
 
 }

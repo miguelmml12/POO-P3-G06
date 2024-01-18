@@ -44,4 +44,9 @@ public class MenuEmprendedorController implements Initializable {
         App.setRoot("menuPrincipal");
     }
 
+    @FXML
+    private void nuevoEmp(ActionEvent event) throws IOException {
+        App.setRoot("aggEmp");
+    }
+
 }
