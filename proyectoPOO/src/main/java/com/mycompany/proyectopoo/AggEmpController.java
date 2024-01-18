@@ -22,23 +22,23 @@ public class AggEmpController implements Initializable {
 
 
     @FXML
-    private Button botonSiguiente;
+    public Button botonSiguiente;
     @FXML
-    private Button cancelarBoton;
+    public Button cancelarBoton;
     @FXML
-    private TextField idPerson;
+    public TextField idPerson;
     @FXML
-    private TextField nombre;
+    public TextField nombre;
     @FXML
-    private TextField telefono;
+    public TextField telefono;
     @FXML
-    private TextField email;
+    public TextField email;
     @FXML
-    private TextField direccion;
+    public TextField direccion;
     @FXML
-    private TextField website;
+    public TextField website;
     @FXML
-    private TextField personaRes;
+    public TextField personaRes;
     /**
      * Initializes the controller class.
      */
