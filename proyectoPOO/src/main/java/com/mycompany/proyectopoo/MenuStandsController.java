@@ -15,8 +15,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import interfaces.*;
 import static interfaces.StandManager.menuStand;
+import static interfaces.StandManager.*;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import modelo.Feria;
 import modelo.Stand;
@@ -36,7 +39,7 @@ public class MenuStandsController implements Initializable {
     private VBox tablaStands;
     @FXML
     private Button volver;
-
+    public static Feria fer;
     /**
      * Initializes the controller class.
      */
@@ -47,9 +50,10 @@ public class MenuStandsController implements Initializable {
 
     @FXML
     private void buscar(ActionEvent event) {
-        int codFer= Integer.valueOf(textboxCodeFer.getText());
+        int codFer= Integer.parseInt(textboxCodeFer.getText());
         if(MenuFeria.buscarFeriaPorCodigo(codFer) != null){
-          Feria fer = MenuFeria.buscarFeriaPorCodigo(codFer);
+          fer = MenuFeria.buscarFeriaPorCodigo(codFer);
+          StandManager.fer = fer;
           HBox frame1 = new HBox();
           frame1.setAlignment(Pos.CENTER);
           for (Stand stand : fer.seccion1) {
@@ -77,6 +81,26 @@ public class MenuStandsController implements Initializable {
         Button bt = new Button("Asignar Stand");
         Button btn = new Button("Consultar Stand");
         tablaStands.getChildren().addAll(frame1,frame2,frame3,frame4,bt,btn);
+        bt.setOnMouseClicked((MouseEvent event1) -> {
+              try {
+                  // Acciones a realizar cuando se hace clic en "Asignar Stand"
+                  App.setRoot("asignarStand");
+                  // Puedes agregar más acciones según tus necesidades
+              } catch (IOException ex) {
+              }
+          });
+
+        // Asignar EventHandler para el botón "Consultar Stand"
+        btn.setOnMouseClicked((MouseEvent event1) -> {
+            // Acciones a realizar cuando se hace clic en "Consultar Stand"
+            try {
+                  // Acciones a realizar cuando se hace clic en "Asignar Stand"
+                  App.setRoot("menuPrincipal");
+                  // Puedes agregar más acciones según tus necesidades
+              } catch (IOException ex) {
+              }
+            // Puedes agregar más acciones según tus necesidades
+          });
       } 
        else {
 //        System.out.println("Feria no encontrada");
