@@ -94,25 +94,20 @@ public class AsignarStandController implements Initializable {
               if (MenuStandsController.fer.auspiciantes_en_feria == null){
               for (Auspiciante Aus :  MenuStandsController.fer.auspiciantes_en_feria) {
                 if (aus == Aus) {
-                  message.setText("Auspiciante con stand asignado");
-
-               } else {
-                  
                   j++;
                   stand.setCodigo(cod + "*");
-                  
-                }
+               }
+                else{
+                  message.setText("Auspiciante no asignado a feria");
               }
-              }
-              else{
-              j++;
-                  stand.setCodigo(cod + "*");
               }
               
               if(j == 1){
                 MenuStandsController.fer.auspiciantes_en_feria.add(aus);
                 stand.setAuspiciante(aus);
+                aus.stand_en_feria = true;
                 message.setText("Auspiciante asignado");
+                
               }
             }
               else{
@@ -123,8 +118,9 @@ public class AsignarStandController implements Initializable {
       }
      }
 
+     }
     }
-
+    
     @FXML
     private void cancelar(ActionEvent event) throws IOException {
         App.setRoot("menuPrincipal");

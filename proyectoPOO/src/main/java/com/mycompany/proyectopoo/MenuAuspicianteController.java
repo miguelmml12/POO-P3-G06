@@ -34,6 +34,8 @@ public class MenuAuspicianteController implements Initializable {
     private Button salirAus;
     @FXML
     private VBox jijija;
+    @FXML
+    private Button asignar;
     /**
      * Initializes the controller class.
      */
@@ -61,6 +63,11 @@ public class MenuAuspicianteController implements Initializable {
     @FXML
     private void nuevoAus(ActionEvent event) throws IOException {
         App.setRoot("agregarAus");
+    }
+
+    @FXML
+    private void asignar(ActionEvent event) throws IOException {
+        App.setRoot("asignarAus");
     }
 
 }

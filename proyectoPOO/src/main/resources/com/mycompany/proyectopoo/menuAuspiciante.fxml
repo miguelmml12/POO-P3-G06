@@ -38,6 +38,8 @@
                   <VBox alignment="CENTER" prefHeight="199.0" prefWidth="255.0">
                      <children>
                         <Button fx:id="editarAus" mnemonicParsing="false" onAction="#editarAus" prefHeight="30.0" prefWidth="138.0" style="-fx-background-color: CHARTREUSE;" text="Editar Auspiciante" />
+                        <Label />
+                        <Button fx:id="asignar" mnemonicParsing="false" onAction="#asignar" prefHeight="25.0" prefWidth="178.0" style="-fx-background-color: CHARTREUSE;" text="Asignar auspiciante a feria" />
                      </children>
                   </VBox>
                </children>
