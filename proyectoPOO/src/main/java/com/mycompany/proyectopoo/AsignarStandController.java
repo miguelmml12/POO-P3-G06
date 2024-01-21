@@ -88,6 +88,8 @@ public class AsignarStandController implements Initializable {
             
             if (aus != null) {
               
+              if(aus.stand_en_feria == false){
+              
               message.setText(aus.getNombre());
               if (MenuStandsController.fer.auspiciantes_en_feria == null){
               for (Auspiciante Aus :  MenuStandsController.fer.auspiciantes_en_feria) {
@@ -113,6 +115,10 @@ public class AsignarStandController implements Initializable {
                 message.setText("Auspiciante asignado");
               }
             }
+              else{
+                  message.setText("Auspiciante con stand asignado");
+              }
+           }
         }
       }
      }

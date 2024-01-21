@@ -3,9 +3,9 @@ package modelo;
 import java.util.ArrayList;
 
 public class Auspiciante extends Persona {
-    private Sector sector;
-    private String descripcion;
-    private boolean stand_en_feria;
+    public Sector sector;
+    public String descripcion;
+    public boolean stand_en_feria;
 
     public Auspiciante(String cedula, String nombre, String nombrePersona, String telefono, String email, String direccion, String sitioWeb,ArrayList<String> redesSociales, Sector sector) {
         super(cedula, nombre, nombrePersona, telefono, email, direccion, sitioWeb,redesSociales);

@@ -26,6 +26,7 @@ public class AuspicianteManager {
             redesJibajaCorp.add(redSocial);
         }
         Auspiciante aus1 = new Auspiciante("1711111111", "Jibaja Corp", "Josue Jibaja", "0999999990", "ejeyd@example.com", "calle 1", "www.jibajaCorp.com", redesJibajaCorp, Sector.EDUCACION);
+        aus1.stand_en_feria = true;
         auspiciantes.add(aus1);
       stand1.setAuspiciante(aus1);
       stand1.setCodigo("A2*");
