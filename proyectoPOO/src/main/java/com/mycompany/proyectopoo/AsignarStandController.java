@@ -84,11 +84,13 @@ public class AsignarStandController implements Initializable {
             String codAus = userCode.getText();
             aus = AuspicianteManager.buscarAuspiciantePorID(codAus);
             message.setText(aus.getNombre());
+            int j = 0;
             
             if (aus != null) {
-              int j = 0;
+              
               message.setText(aus.getNombre());
-              for (Auspiciante Aus : fer.getAuspiciantes_en_feria()) {
+              if (MenuStandsController.fer.auspiciantes_en_feria == null){
+              for (Auspiciante Aus :  MenuStandsController.fer.auspiciantes_en_feria) {
                 if (aus == Aus) {
                   message.setText("Auspiciante con stand asignado");
 
@@ -99,9 +101,16 @@ public class AsignarStandController implements Initializable {
                   
                 }
               }
+              }
+              else{
+              j++;
+                  stand.setCodigo(cod + "*");
+              }
+              
               if(j == 1){
-                fer.getAuspiciantes_en_feria().add(aus);
+                MenuStandsController.fer.auspiciantes_en_feria.add(aus);
                 stand.setAuspiciante(aus);
+                message.setText("Auspiciante asignado");
               }
             }
         }
