@@ -341,5 +341,5 @@ public class AuspicianteManager {
         } else if (aus == null) {
             System.out.println("Auspiciante no existente");
         }
-    }
+    }  
 }

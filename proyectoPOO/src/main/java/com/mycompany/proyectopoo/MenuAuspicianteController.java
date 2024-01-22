@@ -52,7 +52,8 @@ public class MenuAuspicianteController implements Initializable {
     }    
     
     @FXML
-    private void editarAus(ActionEvent event) {
+    private void editarAus(ActionEvent event) throws IOException {
+        App.setRoot("editarAuspiciante");
     }
 
     @FXML

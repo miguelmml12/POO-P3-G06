@@ -66,7 +66,7 @@ public class AggAusController implements Initializable {
     @FXML
     public void irRedes(ActionEvent event) throws IOException {
         
-        cedula = idPerson.getText();
+         cedula = idPerson.getText();
          name = nombre.getText();
          nombrePersona = personaRes.getText();
          telefone  = telefono.getText();
