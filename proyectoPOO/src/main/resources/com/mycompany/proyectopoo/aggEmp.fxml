@@ -84,7 +84,7 @@
             <TextField fx:id="direccion" layoutX="185.0" layoutY="291.0" prefHeight="26.0" prefWidth="250.0" />
             <TextField fx:id="website" layoutX="185.0" layoutY="348.0" prefHeight="26.0" prefWidth="250.0" />
             <TextField fx:id="personaRes" layoutX="185.0" layoutY="400.0" prefHeight="26.0" prefWidth="250.0" />
-            <TextField fx:id="direccion" layoutX="185.0" layoutY="447.0" prefHeight="26.0" prefWidth="250.0" />
+            <TextField fx:id="descripcion" layoutX="185.0" layoutY="447.0" prefHeight="26.0" prefWidth="250.0" />
          </children>
       </AnchorPane>
    </children>

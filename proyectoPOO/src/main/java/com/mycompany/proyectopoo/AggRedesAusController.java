@@ -13,6 +13,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -89,9 +91,23 @@ public class AggRedesAusController implements Initializable {
         
         if (buscarAuspiciantePorID(AggAusController.cedula) == null) {
             auspiciantes.add(new Auspiciante(AggAusController.cedula, AggAusController.name, AggAusController.nombrePersona, AggAusController.telefone, AggAusController.mail, AggAusController.direction, AggAusController.sitioWeb, redesS, AggAusController.sector));
+            
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setHeaderText("Auspiciante agregado");
+            alert.setContentText("Volviendo al menu ☻");
+
+            alert.showAndWait();
+            
             App.setRoot("menuAuspiciante"); 
         } else {
-            gg.setText("Usuario ya");
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Usuario ya existe");
+            alert.setContentText("Ingrese otra ccedula");
+
+            alert.showAndWait();
+            App.setRoot("menuAuspiciante"); 
 
 
         }

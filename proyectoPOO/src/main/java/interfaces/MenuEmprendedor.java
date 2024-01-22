@@ -9,7 +9,7 @@ public class MenuEmprendedor {
 
 
   
-    private static ArrayList<Emprendedor> l_emprendedores = new ArrayList<Emprendedor>();
+    public static ArrayList<Emprendedor> l_emprendedores = new ArrayList<Emprendedor>();
     public static String[] nombres_redesS = new String[]{"Twitter", "Facebook", "Instagram", "Youtube", "Tik tok", "Linkedin", "Pinterest"};
     public static int y = 0;
     
