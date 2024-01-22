@@ -85,35 +85,74 @@ public class AsignarStandController implements Initializable {
             aus = AuspicianteManager.buscarAuspiciantePorID(codAus);
             message.setText(aus.getNombre());
             int j = 0;
-            
+            int y = 0;
             if (aus != null) {
               
-              if(aus.stand_en_feria == false){
+              if(MenuStandsController.fer.auspiciante_con_stand == null){
               
-              message.setText(aus.getNombre());
-              if (MenuStandsController.fer.auspiciantes_en_feria == null){
+              if (MenuStandsController.fer.auspiciantes_en_feria != null){
+              System.out.println(MenuStandsController.fer.auspiciantes_en_feria);
               for (Auspiciante Aus :  MenuStandsController.fer.auspiciantes_en_feria) {
                 if (aus == Aus) {
                   j++;
                   stand.setCodigo(cod + "*");
                }
-                else{
-                  message.setText("Auspiciante no asignado a feria");
-              }
+
               }
               
               if(j == 1){
                 MenuStandsController.fer.auspiciantes_en_feria.add(aus);
+                MenuStandsController.fer.auspiciante_con_stand.add(aus);
                 stand.setAuspiciante(aus);
-                aus.stand_en_feria = true;
                 message.setText("Auspiciante asignado");
                 
               }
+              else{
+                  message.setText("Auspiciante no asignado a Feria");
+              }
             }
               else{
-                  message.setText("Auspiciante con stand asignado");
+                  message.setText("Auspiciante no asignado a feria");
               }
            }
+              else{
+                  int i = 0;
+                  for(Auspiciante aUs:MenuStandsController.fer.auspiciante_con_stand){
+                      if (aus == aUs){
+                          message.setText("Auspiciante con stand asignado");
+                          i++;
+                      }
+                  }
+                      if(i == 0){
+                          if (MenuStandsController.fer.auspiciantes_en_feria != null){
+              System.out.println(MenuStandsController.fer.auspiciantes_en_feria);
+              for (Auspiciante Aus :  MenuStandsController.fer.auspiciantes_en_feria) {
+                if (aus == Aus) {
+                  j++;
+                  stand.setCodigo(cod + "*");
+               }
+
+              }
+              
+              if(j == 1){
+                MenuStandsController.fer.auspiciantes_en_feria.add(aus);
+                MenuStandsController.fer.auspiciante_con_stand.add(aus);
+                stand.setAuspiciante(aus);
+                message.setText("Auspiciante asignado");
+                
+              }
+              else{
+                  message.setText("Auspiciante no asignado a Feria");
+              }
+            }
+              else{
+                  message.setText("Auspiciante no asignado a feria");
+              }
+                      }
+                  }
+                  
+                  
+              
         }
       }
      }

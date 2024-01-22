@@ -77,6 +77,14 @@ public class AsignarAusController implements Initializable {
         String cedulaAus = id.getText();
         ausSel = AuspicianteManager.buscarAuspiciantePorID(cedulaAus);        
         feriaSel.auspiciantes_en_feria.add(ausSel);
+        String op = standEnFeria.getValue();
+        if(op == "si"){
+            ausSel.stand_en_feria = true;
+        }
+        else{
+            ausSel.stand_en_feria = false;
+        }
+       
         
                     }
                     else{
