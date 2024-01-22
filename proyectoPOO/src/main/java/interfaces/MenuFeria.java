@@ -109,6 +109,15 @@ public class MenuFeria {
         }
         return null;
     }
+    
+    public static Feria buscarFeriaPorNombre(String name) {
+        for (Feria feria : ferias) {
+            if (feria.getNombre().equals(name)) {
+                return feria;
+            }
+        }
+        return null;
+    }
 
     static void registrarFeria() {
         Scanner scanner = new Scanner(System.in);

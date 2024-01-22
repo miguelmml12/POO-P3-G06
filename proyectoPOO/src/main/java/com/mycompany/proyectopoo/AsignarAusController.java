@@ -4,6 +4,7 @@
  */
 package com.mycompany.proyectopoo;
 
+import interfaces.AuspicianteManager;
 import interfaces.MenuFeria;
 import java.io.IOException;
 import java.net.URL;
@@ -14,9 +15,12 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import modelo.Auspiciante;
 import modelo.Feria;
 
 /**
@@ -38,12 +42,15 @@ public class AsignarAusController implements Initializable {
     private Button asignaR;
     @FXML
     private Button cancelar;
+    Feria feriaSel = null;
+    Auspiciante ausSel = null;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         ArrayList<Feria> fer = MenuFeria.ferias;
         ObservableList<String> items1 = FXCollections.observableArrayList();
         
@@ -58,6 +65,51 @@ public class AsignarAusController implements Initializable {
     @FXML
     private void asignar(ActionEvent event) {
         
+        System.out.println(standEnFeria.getValue());
+        System.out.println(id.getText());
+        
+        if(ferias_box.getValue() != null){
+            if(!id.getText().isBlank()){
+                if(standEnFeria.getValue() != null){
+                    if(!descripcionAus.getText().isBlank()){
+                        
+                        feriaSel = MenuFeria.buscarFeriaPorNombre(ferias_box.getValue());
+        String cedulaAus = id.getText();
+        ausSel = AuspicianteManager.buscarAuspiciantePorID(cedulaAus);        
+        feriaSel.auspiciantes_en_feria.add(ausSel);
+        
+                    }
+                    else{
+                        Alert alert = new Alert(AlertType.ERROR);
+                        alert.setTitle("Missing Error");
+                        alert.setHeaderText("Missing description");
+                        alert.setContentText("Please add a description of the sponsorship to be able to save it");
+                        alert.showAndWait();
+
+                    }
+                }
+                else{
+                Alert alert = new Alert(AlertType.ERROR);
+                        alert.setTitle("Missing Error");
+                        alert.setHeaderText("Missing selection");
+                        alert.setContentText("Please select yes/no in 'does it have a stand' to be able to save it");
+                        alert.showAndWait();
+                }
+            }
+            else{
+            Alert alert = new Alert(AlertType.ERROR);
+                        alert.setTitle("Missing Error");
+                        alert.setHeaderText("Missing id");
+                        alert.setContentText("Please add an ID of the sponsor to be able to save it");
+                        alert.showAndWait();
+            }
+        }else{
+        Alert alert = new Alert(AlertType.ERROR);
+                        alert.setTitle("Missing Error");
+                        alert.setHeaderText("Missing fair");
+                        alert.setContentText("Please a fair to be able to save it");
+                        alert.showAndWait();
+        }
         
         
     }
