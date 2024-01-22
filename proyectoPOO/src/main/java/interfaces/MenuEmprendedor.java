@@ -249,4 +249,9 @@ public class MenuEmprendedor {
         }
         return null;
     }
+    
+    public static ArrayList<Emprendedor> getEmprendedores() {
+    return l_emprendedores;
+  }
+    
 }
