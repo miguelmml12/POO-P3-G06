@@ -39,6 +39,18 @@ public class AggEmpController implements Initializable {
     public TextField website;
     @FXML
     public TextField personaRes;
+    
+    public  static String cedula;
+    public static String name;
+    public static String nombrePersona;
+    public static String telefone;
+    public static String mail;
+    public static String direction;
+    public static String sitioWeb;
+    public static String description;
+    
+    @FXML
+    private TextField descripcion;
     /**
      * Initializes the controller class.
      */
@@ -49,6 +61,17 @@ public class AggEmpController implements Initializable {
     
     @FXML
     private void irRedes(ActionEvent event) throws IOException {
+        
+        cedula = idPerson.getText();
+         name = nombre.getText();
+         nombrePersona = personaRes.getText();
+         telefone  = telefono.getText();
+         mail = email.getText();
+         direction = direccion.getText();
+         sitioWeb = website.getText();
+         description = descripcion.getText();
+        
+        //new Emprendedor(cedula, nombre, nombrePersona, telefono, email, direccion, sitioWeb, redesS, description
                  App.setRoot("aggRedesEmp");
 
     }

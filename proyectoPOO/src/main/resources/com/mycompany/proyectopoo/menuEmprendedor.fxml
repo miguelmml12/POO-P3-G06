@@ -3,12 +3,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Reflection?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectopoo.MenuEmprendedorController">
    <children>
@@ -17,11 +14,6 @@
             <Font name="Bodoni MT Bold" size="27.0" />
          </font>
       </Label>
-      <ImageView fitHeight="112.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../imagenes/emprendedor.png" />
-         </image>
-      </ImageView>
       <Label prefHeight="44.0" prefWidth="468.0" text="Opciones:">
          <font>
             <Font name="Bodoni MT" size="21.0" />
@@ -47,15 +39,6 @@
             <Button fx:id="salirEmp" mnemonicParsing="false" onAction="#salirEmp" text="Salir" textFill="RED" />
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <ImageView fitHeight="101.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../imagenes/logo_ESPOL.png" />
-               </image>
-            </ImageView>
-            <Label prefHeight="18.0" prefWidth="11.0" text="      " textOverrun="CLIP" />
-         </children>
-      </HBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" fx:id="xd" />
    </children>
 </VBox>
