@@ -116,7 +116,8 @@ public class PrimaryController implements Initializable {
     }
 
     @FXML
-    private void detalles(ActionEvent event) {
+    private void detalles(ActionEvent event) throws IOException {
+        App.setRoot("infoFeria");
     }
 
     @FXML

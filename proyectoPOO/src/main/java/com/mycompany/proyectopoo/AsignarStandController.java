@@ -6,6 +6,7 @@ package com.mycompany.proyectopoo;
 
 import com.mycompany.proyectopoo.App;
 import interfaces.AuspicianteManager;
+import interfaces.MenuEmprendedor;
 import interfaces.StandManager;
 import static interfaces.StandManager.buscarStandPorCodigo;
 import static interfaces.StandManager.fer;
@@ -21,11 +22,14 @@ import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import modelo.Auspiciante;
+import modelo.Emprendedor;
 import modelo.Stand;
 /**
  * FXML Controller class
@@ -76,7 +80,55 @@ public class AsignarStandController implements Initializable {
       } else {
         String op = comboBox.getValue();
         if(op == "emprendedor"){
-            //hola
+           int t = 0;
+            Emprendedor emp = null;
+            String codEmp = userCode.getText();
+            emp = MenuEmprendedor.buscarEmprendedorPorID(codEmp);
+            if(emp != null){
+                if(MenuStandsController.fer.emprendedores != null){
+                    for(Emprendedor emP:MenuStandsController.fer.emprendedores){
+                        if(emp == emP){
+                           t++; 
+                        }
+                            
+                    }
+                    if(t==0){
+                        stand.setCodigo(cod + "*");
+                        stand.setEmprendedor(emp);
+                        MenuStandsController.fer.emprendedores.add(emp);
+                        message.setText("Emprendedor asignado");
+                        
+                         Alert alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Information");
+                    alert.setHeaderText("Emprendedor asignado");
+                    alert.setContentText("Volviendo al menu");
+
+                    alert.showAndWait();
+                    App.setRoot("menuStands");
+                        
+                    }
+                    
+                    
+                    else if(t==1){
+                        message.setText("Emprendedor con Stand asignado");
+                    }
+                }
+                else{
+                    stand.setCodigo(cod + "*");
+                    stand.setEmprendedor(emp);
+                    MenuStandsController.fer.emprendedores.add(emp);
+                    message.setText("Emprendedor asignado");
+                    
+                    Alert alert = new Alert(AlertType.INFORMATION);
+                    alert.setTitle("Information");
+                    alert.setHeaderText("Emprendedor asignado");
+                    alert.setContentText("Volviendo al menu");
+
+                    alert.showAndWait();
+                    App.setRoot("menuStands");
+                }
+            }
+            
         }
         if(op == "auspiciante"){
             message.setText("Sel Auspiciante");
